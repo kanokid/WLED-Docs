@@ -14,7 +14,11 @@ Connection to both domains and IP servers is supported on port 1883.
 !!! warning
     Secure connections are not currently supported. I recommend only connecting to local MQTT brokers.
     In v0.8.4-0.8.6 only, WLED supports MQTT autodiscovery by the HomeAssistant software. This has been removed because of bootloop issues and in favor of the native HomeAssistant integration.
-
+   ""**⚠️ MQTT Configuration Warning**""
+Before saving your configuration, make sure your MQTT broker is running and reachable.
+If WLED tries to connect to a non-existent or misconfigured broker, it can cause the device to become unresponsive or appear “bricked.”
+"""**Tip:**"""
+Finish your full MQTT setup after verifying your broker connection to avoid unnecessary reflashing or factory resets.
 WLED will subscribe to up to six topics to change the state of the lights.
 
 - **[mqttDeviceTopic]**  
